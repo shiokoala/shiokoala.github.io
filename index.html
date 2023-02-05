@@ -25,6 +25,16 @@
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   </script>
+
+  <script>
+    FB.ui(
+      {
+        method: "share",
+        href: "https://developers.facebook.com/docs/",
+      },
+      function (response) {}
+    );
+  </script>
   Hello World!
   <div
     class="fb-like"
