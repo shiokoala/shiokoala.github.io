@@ -1,55 +1,56 @@
 <!DOCTYPE html>
+<html>
+  <head> </head>
 
-<head> </head>
+  <body>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "637851974767611",
+          xfbml: true,
+          version: "v16.0",
+        });
+        FB.AppEvents.logPageView();
+      };
 
-<body>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: "637851974767611",
-        xfbml: true,
-        version: "v16.0",
-      });
-      FB.AppEvents.logPageView();
-    };
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
+    <script>
+      FB.ui(
+        {
+          method: "share",
+          href: "https://developers.facebook.com/docs/",
+        },
+        function (response) {}
+      );
+    </script>
+    Hello World!
+    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true"
+    ></div>
 
-  <script>
-    FB.ui(
-      {
-        method: "share",
-        href: "https://developers.facebook.com/docs/",
-      },
-      function (response) {}
-    );
-  </script>
-  Hello World!
-  <div
-    class="fb-like"
-    data-share="true"
-    data-width="450"
-    data-show-faces="true"
-  ></div>
-
-  <div
-    class="fb-like"
-    data-href="https://developers.facebook.com/docs/plugins/"
-    data-width="100"
-    data-layout="standard"
-    data-action="like"
-    data-size="small"
-    data-share="true"
-  ></div>
-</body>
+    <div
+      class="fb-like"
+      data-href="https://developers.facebook.com/docs/plugins/"
+      data-width="100"
+      data-layout="standard"
+      data-action="like"
+      data-size="small"
+      data-share="true"
+    ></div>
+  </body>
+</html>
